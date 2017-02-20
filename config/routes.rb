@@ -17,6 +17,9 @@ Rails.application.routes.draw do
           end
         end
       end
+      resources :books, only: [:show, :index] do
+        resources :requests, only: [:create]
+      end
     end
   end
 end
