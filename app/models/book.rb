@@ -11,6 +11,7 @@
 #
 
 class Book < ApplicationRecord
+  has_many :comments
   has_many :requests
   has_many :users, through: :requests
 end

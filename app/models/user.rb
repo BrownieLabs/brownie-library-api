@@ -31,6 +31,7 @@
 
 class User < ApplicationRecord
   has_many :requests
+  has_many :comments
   has_many :books, through: :requests
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
